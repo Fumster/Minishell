@@ -6,7 +6,7 @@ NAME =		minishell
 FLAGS =		-Wall -Wextra -Werror
 INCLUDES =  -I hdr/ -I libs/libft
 VPATH = 	obj:src:hdr:libs/libft
-LIBS =		-lreadline -L./libs -lft
+LIBS =		-lreadline -L./libs/libft -lft
 LIBFT = 	./libs/libft/libft.a
 
 
