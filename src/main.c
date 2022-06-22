@@ -6,7 +6,7 @@
 /*   By: fchrysta <fchrysta@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:28:56 by fchrysta          #+#    #+#             */
-/*   Updated: 2022/06/20 20:38:43 by fchrysta         ###   ########.fr       */
+/*   Updated: 2022/06/22 19:36:22 by fchrysta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 
 int	main(void)
 {
-	printf("hello world\n");
+	char *input;
+	while (1)
+	{
+		input = readline("MYSHELL $ ");
+		if (!input)
+			break;
+		add_history(input);
+		printf("input is %s\n", input);
+		free (input);
+	}
+	printf("Exiting\n");
 	return (0);
 }
