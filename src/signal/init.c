@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.h                                        :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fchrysta <fchrysta@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/20 20:36:04 by fchrysta          #+#    #+#             */
-/*   Updated: 2022/06/30 21:41:26 by fchrysta         ###   ########.fr       */
+/*   Created: 2022/06/30 21:09:08 by fchrysta          #+#    #+#             */
+/*   Updated: 2022/06/30 21:40:27 by fchrysta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<unistd.h>
-#include<signal.h>
-#include<readline/readline.h>
-#include<readline/history.h>
+include "minishell.h"
+
+void	sighandler
+
+void	init_sighandler()
+{
+	struct sigaction	sa;
+	int					a;
+
+	sa.sa_sigaction = sig_handler;
+	sigaction(SIGINT, &sa, NULL);
+}
