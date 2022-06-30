@@ -1,13 +1,13 @@
-SOURCES = 	main.c
-OBJECTS =	$(SOURCES:.c=.o)
-HEADER = 	minishell.h
-CC = 		gcc
-NAME =		minishell
-FLAGS =		-Wall -Wextra -Werror
-INCLUDES =  -I hdr/ -I libs/libft
-VPATH = 	obj:src:hdr:libs/libft
-LIBS =		-lreadline -L./libs/libft -lft
-LIBFT = 	./libs/libft/libft.a
+SOURCES = 		main.c
+OBJECTS =		$(SOURCES:.c=.o)
+HEADER = 		minishell.h
+CC = 			gcc
+NAME =			minishell
+FLAGS =			-Wall -Wextra -Werror
+INCLUDES =  	-I hdr/ -I libs/libft
+VPATH = 		obj:src:hdr:libs/libft
+LIBINCLUDES =	-lreadline -L./libs/libft -lft
+LIBS = 			./libs/libft/libft.a
 
 
 .PHONY:		all re clean fclean
@@ -15,7 +15,7 @@ LIBFT = 	./libs/libft/libft.a
 all:		$(LIBS) $(NAME)
 
 $(NAME):	$(OBJECTS) $(LIBS)
-			$(CC) $(FLAGS) $(INCLUDES) $(addprefix obj/,$(OBJECTS)) $(LIBS) -o $@
+			$(CC) $(FLAGS) $(addprefix obj/,$(OBJECTS)) $(LIBINCLUDES) -o $@
 
 %.o:		%.c $(HEADER)
 			@mkdir -p obj
