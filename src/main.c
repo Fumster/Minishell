@@ -6,7 +6,7 @@
 /*   By: fchrysta <fchrysta@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:28:56 by fchrysta          #+#    #+#             */
-/*   Updated: 2022/07/03 17:36:35 by fchrysta         ###   ########.fr       */
+/*   Updated: 2022/07/04 21:04:08 by fchrysta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,9 @@ int	main(void)
 		if (input[0] != '\0')
 			add_history(input);
 		printf("input is %s\n", input);
+		free (input);
 	}
+//	free (input);
 	printf("Exiting\n");
-	free (input);
 	return (0);
 }
