@@ -6,7 +6,7 @@
 /*   By: fchrysta <fchrysta@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 21:09:08 by fchrysta          #+#    #+#             */
-/*   Updated: 2022/07/03 17:53:09 by fchrysta         ###   ########.fr       */
+/*   Updated: 2022/07/04 20:08:41 by fchrysta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	sighandler(int sig, siginfo_t *info, void *oldact)
 {
-//	int	len;
-
 	(void)oldact;
 	(void)info;
 	if (sig == SIGINT)
