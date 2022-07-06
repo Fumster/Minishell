@@ -1,11 +1,11 @@
-SOURCES = 		main.c sighandler.c
+SOURCES = 		main.c sighandler.c lexer.c
 OBJECTS =		$(SOURCES:.c=.o)
 HEADER = 		minishell.h
 CC = 			gcc
 NAME =			minishell
 FLAGS =			-Wall -Wextra -Werror
 INCLUDES =  	-I hdr/ -I libs/libft
-VPATH = 		obj:src:hdr:libs/libft:src/signal
+VPATH = 		obj:src:hdr:libs/libft:src/signal:src/parser
 LIBINCLUDES =	-lreadline -L./libs/libft -lft
 LIBS = 			./libs/libft/libft.a
 
