@@ -6,7 +6,7 @@
 /*   By: fchrysta <fchrysta@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:28:56 by fchrysta          #+#    #+#             */
-/*   Updated: 2022/07/06 22:55:52 by fchrysta         ###   ########.fr       */
+/*   Updated: 2022/07/09 19:17:29 by fchrysta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ int	main(void)
 		parse_input(input);
 		free (input);
 	}
-	printf("Exiting\n");
+	printf("Exiting \n");
 	return (0);
 }
