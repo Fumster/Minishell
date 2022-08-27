@@ -6,7 +6,7 @@
 /*   By: fchrysta <fchrysta@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 22:19:16 by fchrysta          #+#    #+#             */
-/*   Updated: 2022/08/12 18:51:41 by fchrysta         ###   ########.fr       */
+/*   Updated: 2022/08/27 16:06:14 by fchrysta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,5 @@ void parse_input(char *input)
 	t_token	token;
 	
 	string = ft_strtrim(input, " ");
-	token.type = TARGUMENT;
-	printf ("token pipe is %d\n", token.type);
-	printf ("string after trim - <%s>\n", string);
 	free (string);
 }

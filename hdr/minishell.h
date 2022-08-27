@@ -6,7 +6,7 @@
 /*   By: fchrysta <fchrysta@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:36:04 by fchrysta          #+#    #+#             */
-/*   Updated: 2022/08/12 18:51:06 by fchrysta         ###   ########.fr       */
+/*   Updated: 2022/08/27 16:04:55 by fchrysta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef MINISHELL_H
@@ -24,22 +24,23 @@ typedef struct s_global
 	int		exitcode;
 }			t_global;
 
-typedef enum	e_types
+typedef enum	e_way
 {
-	TCOMMAND,
-	TARGUMENT
-	TQUOTE,
-	TREDIRECT,
-	TDOUBLE_REDIRECT,
-	TPIPE,
-}				t_types;
+	STD,
+	PIP,
+	FIL,
+	HRD,
+}				t_way;
 
-typedef struct	s_token
+typedef struct	s_cmd
 {
-	t_types			type;
-	char			value[100];
-	struct s_token	*next;
-}					t_token;
+	char			cmd[20];
+	char			arg[100];
+	t_way			input;
+	t_way			output;
+	char			filename[30];
+	struct s_cmd	*next;
+}					t_cmd;
 
 extern t_global	g_global;
 
